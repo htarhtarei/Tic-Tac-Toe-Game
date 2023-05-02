@@ -1,0 +1,255 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --background: #172554;
+        --purple: #9333ea;
+        --blue: #1d4ed8;
+        --light-purple: #6d28d9;
+        --Fuchsia: #e879f9;
+        --white: #ffffff;
+    }
+    
+    body {
+        background-color: var(--background);
+        font-family: "Poopins", sans-serif;
+    }
+    
+    .container {
+        width: 390px;
+        max-height: 50vh;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    /* start chosing area */
+    
+    .wrapper {
+        padding: 20px 30px;
+        background-color: rgba(255, 255, 255, 0.1);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    
+    .wrapper h2 {
+        font-size: 2.1rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 20px;
+        text-align: center;
+        background: linear-gradient(135deg, var(--light-purple), var(--blue), var(--Fuchsia), var(--light-purple));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .wrapper p {
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding: 20px 4px;
+        color: #c0c6d0;
+    }
+    
+    .wrapper .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+        background-color: rgba(255, 255, 255, 0.8);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    .image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    
+    .profile .detail {
+        line-height: 3px;
+    }
+    
+    .profile .detail p {
+        font-size: 1rem;
+    }
+    
+    .profile .detail h4 {
+        font-size: 1rem;
+        color: #373c4b;
+    }
+    
+    .chooseSymbol {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .chooseSymbol button {
+        background: linear-gradient(140deg, var(--purple) 0%, var(--blue) 25%, var(--light-purple) 50%, var(--Fuchsia) 100%);
+        border-radius: 10px;
+        border: none;
+        color: var(--white);
+        font-size: 1.2rem;
+        margin-top: 30px;
+        padding: 18px 30px;
+        margin: 0 8px;
+        transition: all .5s ease;
+    }
+    
+    .chooseSymbol button:hover {
+        transform: scale(.9);
+    }
+    
+    .wrapper.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .wrapper.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    /*---------------- Playing area------------------- */
+    
+    .playArea {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .playArea.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-10%, -70%) scale(1);
+    }
+    
+    .players {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px 10px;
+        border: 2px solid var(--blue);
+        box-shadow: 0px 0px 8px var(--purple), 0px 0px 9px var(--blue);
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+    
+    .user,
+    .robot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        width: 130px;
+        height: 60px;
+        padding: 0 3px;
+        transition: all .5s ease;
+    }
+    
+    .vsText {
+        font-size: 1.4rem;
+        background: linear-gradient(15deg, var(--light-purple), var(--blue), var(--Fuchsia), var(--light-purple));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        text-shadow: 3px 1px 16px var(--purple), 3px 1px 10px var(--blue);
+    }
+    
+    .active {
+        border-bottom: 3px solid var(--light-purple);
+        padding-bottom: 5px;
+    }
+    /*----------------- playBoxs --------------*/
+    
+    .playBoxs {
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        margin-top: 30px;
+        box-shadow: 0px 0px 8px var(--purple), 0px 0px 9px var(--blue);
+    }
+    
+    .playBoxs .box-group {
+        display: flex;
+    }
+    
+    .playBoxs .box-group span {
+        width: 135px;
+        height: 130px;
+        border: 1px solid var(--light-purple);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        font-weight: 900;
+        background: linear-gradient(15deg, var(--light-purple), var(--blue), var(--Fuchsia), var(--light-purple));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-shadow: 0px 0px 8px var(--purple), 0px 0px 7px var(--blue);
+    }
+    /* -----------------result area--------------- */
+    
+    .resultArea {
+        border: 2px solid var(--blue);
+        box-shadow: 0px 0px 8px var(--purple), 0px 0px 9px var(--blue);
+        background-color: rgba(255, 255, 255, 0.1);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-radius: 5px;
+        padding: 10px 30px;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .resultArea h2 {
+        font-size: 1.5rem;
+        color: var(--white);
+        text-align: center;
+        border-bottom: 1px solid rgb(212, 205, 205);
+        padding-bottom: 15px;
+    }
+    
+    .resultArea .matcher {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .resultArea .replayBtn {
+        background: linear-gradient(140deg, var(--purple) 0%, var(--blue) 25%, var(--light-purple) 50%, var(--Fuchsia) 100%);
+        border-radius: 10px;
+        border: none;
+        color: var(--white);
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        transition: all .5s ease;
+        margin: 20px auto;
+        width: 320px;
+    }
+    
+    .resultArea .replayBtn:hover {
+        transform: scale(.9);
+    }
+    
+    .resultArea.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-10%, -320%) scale(1);
+    }

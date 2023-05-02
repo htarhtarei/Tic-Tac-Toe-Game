@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h2>Tic-Tac-Toe Game</h2>
+            <div class="profile">
+                <img src="/image/user1.jpg" alt="user" class="image">
+                <div class="detail">
+                    <h4>Iris Fleur</h4>
+                </div>
+            </div>
+            <p>Select which you want to be?</p>
+            <div class="chooseSymbol">
+                <button class="playerX">Player (X)</button>
+                <button class="playerO">Player (O)</button>
+            </div>
+        </div>
+        <div class="playArea">
+            <div class="players">
+                <div class="user active">
+                    <img src="/image/user1.jpg" alt="user" class="image"> Iris Fleur
+                </div>
+                <p class="vsText">VS</p>
+                <div class="robot">
+                    <img src="/image/robot.jpg" alt="robot" class="image"> Ai
+                </div>
+            </div>
+            <div class="playBoxs">
+                <div class="box-group">
+                    <span class="box1"></span>
+                    <span class="box2"></span>
+                    <span class="box3"></span>
+                </div>
+                <div class="box-group">
+                    <span class="box4"></span>
+                    <span class="box5"></span>
+                    <span class="box6"></span>
+                </div>
+                <div class="box-group">
+                    <span class="box7"></span>
+                    <span class="box8"></span>
+                    <span class="box9"></span>
+                </div>
+            </div>
+        </div>
+        <div class="resultArea">
+            <h2 class="resultText"></h2>
+            <div class="matcher">
+                <div class="user">
+                    <img src="/image/user1.jpg" alt="user" class="image"> Iris Fleur
+                </div>
+                <p class="vsText">VS</p>
+                <div class="robot">
+                    <img src="/image/robot.jpg" alt="robot" class="image"> Ai
+                </div>
+            </div>
+            <div class="replay">
+                <button class="replayBtn">Replay <i class="fa-solid fa-rotate"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/script.js"></script>
+
+</html>
